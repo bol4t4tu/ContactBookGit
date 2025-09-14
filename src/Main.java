@@ -14,6 +14,7 @@ public class Main {
     public static final String SET_EMAIL      = "SE";
     public static final String LIST_CONTACTS  = "LC";
     public static final String QUIT           = "Q";
+    public static final String REPEATED_CONTACT = "EP";
 
     //Constantes que definem as mensagens para o utilizador
     public static final String CONTACT_EXISTS = "contactBook.Contact already exists.";
@@ -52,6 +53,9 @@ public class Main {
                     break;
                 case LIST_CONTACTS:
                     listAllContacts(cBook);
+                    break;
+                case REPEATED_CONTACT:
+                    repeated_contact(in, cBook);
                     break;
                 default:
                     System.out.println(COMMAND_ERROR);
@@ -146,5 +150,16 @@ public class Main {
             }
         }
         else System.out.println(BOOK_EMPTY);
+    }
+
+    private static void repeated_contact (Scanner in, ContactBook cbook){
+        boolean found= cbook.thereAreContactsWithTheSameNumber();
+		
+		if(found==true) {
+			System.out.println("There are contacts that share phone numbers.");
+		}
+		else {
+			System.out.println("All contacts have different phone numbers.");
+		}
     }
 }

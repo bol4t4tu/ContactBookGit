@@ -93,4 +93,24 @@ public class ContactBook {
         return contacts[currentContact++];
     }
 
+    public boolean thereAreContactsWithTheSameNumber() {
+		if(counter==0|| counter==1) {
+			return false;
+		}
+		else {
+
+			for(int i=0; i<counter-1;i++) {
+				for(int j=i+1;j<counter;j++) {
+
+					if(contacts[i].getPhone()==contacts[j].getPhone()) {
+						return true;
+					}
+				}
+			}
+		}
+		return false;
+
+	}
+
+
 }
