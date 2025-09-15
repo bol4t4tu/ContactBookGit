@@ -98,10 +98,8 @@ public class ContactBook {
 			return false;
 		}
 		else {
-
 			for(int i=0; i<counter-1;i++) {
 				for(int j=i+1;j<counter;j++) {
-
 					if(contacts[i].getPhone()==contacts[j].getPhone()) {
 						return true;
 					}
@@ -109,8 +107,26 @@ public class ContactBook {
 			}
 		}
 		return false;
-
 	}
 
 
+    public boolean hasPhone(int number) {
+        for(int i=0;i<counter;i++){
+            if(contacts[i].getPhone()==number)
+                return true;
+        }
+        return false;
+    }
+
+    public String getNameOfPhone(int number) {
+        String name = null;
+        int i = 0 ;
+        while (name==null && i<counter) {
+            if(contacts[i].getPhone()==number)
+                name  = contacts[i].getName();
+            i++;
+        }
+
+        return name;
+    }
 }
