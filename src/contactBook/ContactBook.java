@@ -113,4 +113,21 @@ public class ContactBook {
 	}
 
 
+    public int searchByPhone(int phone) {
+        int index = -1;
+        int i = 0;
+
+        while (index==-1 && i<counter) {
+            if(contacts[i].getPhone()==phone) {
+                index = i;
+            }
+            i++;
+        }
+
+        return index;
+    }
+
+    public String getName(int index) {
+        return contacts[index].getName();
+    }
 }
