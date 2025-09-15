@@ -170,12 +170,12 @@ public class Main {
 
     private static void get_number(Scanner in, ContactBook cBook){
         int phone;
-        phone = in.nextInt();
-        in.nextLine();
-        if(cBook.getNumberOfContacts()==0 || cBook.searchByPhone(phone)==-1){ // searchByPhone no contactbook por fazer, procura se o numero existe se sim devolve o nr, senao, devolve -1
+        phone = in.nextInt();in.nextLine();
+
+        if(cBook.getNumberOfContacts()==0 || cBook.searchByPhone(phone)==-1){
             System.out.println(NO_PHONE);
         }else{
-           System.out.println(cBook.getName(cBook.searchByPhone(phone))); 
+            System.out.println(cBook.getName(cBook.searchByPhone(phone)));
         }
     }
 }
