@@ -6,8 +6,8 @@ You will notice some things need to be updated in this code. It was originally m
 
 ## Contributing
 
-Gonçalo Guerreiro    n69029
+Gonçalo Guerreiro (Gwerreiro)    n69029
 
-João Dias            n67857
+João Dias (jpcdias-dev)           n67857
 
-Tomás Silva          n68644
+Tomás Silva (bol4t4tu)         n68644
